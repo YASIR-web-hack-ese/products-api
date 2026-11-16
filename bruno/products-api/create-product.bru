@@ -1,0 +1,24 @@
+meta {
+  name: Create product
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/products
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "Whole wheat flour 1kg",
+    "price": 180,
+    "category": "flour",
+    "in_stock": 25
+  }
+}
