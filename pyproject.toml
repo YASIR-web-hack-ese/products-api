@@ -1,0 +1,24 @@
+[project]
+name = "products-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Yasir Ali Khan", email = "attaleghyasiralikhan@gmail.com" }
+]
+requires-python = ">=3.15"
+dependencies = [
+    "fastapi>=0.163.1",
+    "httpx>=0.28.1",
+    "pytest>=9.2.0",
+]
+
+[project.scripts]
+products-api = "products_api:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.fastapi]
+app = "products_api.main:app"
